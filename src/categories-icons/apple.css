@@ -19,6 +19,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.cat-recent:before {
+    content: "\e906";
+}
 .cat-0:before {
     content: "\e900";
 }

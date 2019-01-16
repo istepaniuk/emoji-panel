@@ -67,7 +67,7 @@ module.exports = (api, imageSet, size) => {
       'background-image': `url('${backgroundImageFileLocation}')`
     },
     '.ep-slide': {
-      width: `${100 / categoryOrder.length}%`
+      width: `${100 / (categoryOrder.length + 1)}%`
     }
   }, categoryOrder.reduce((catObj, category) => Object.assign(catObj,
     emojiData[category].reduce((emojiObj, emoji) => Object.assign(emojiObj, {

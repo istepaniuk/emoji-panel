@@ -44,11 +44,11 @@ export const scrollElementTo = (el, done, newScrollHeight = 0, scrollDuration = 
   requestAnimationFrame(loop);
 };
 
-const marginParam = 100 / categoryOrder.length;
+const marginParam = 100 / (1 + categoryOrder.length);
 export const slideToCategory = (panelVariables, slideEl, categoryId) => {
   if (panelVariables.selectedCategoryId !== categoryId) {
     panelVariables.selectedCategoryId = categoryId;
     const selectedCategoryIndex = categoryOrder.indexOf(categoryId);
-    slideEl.style.marginLeft = selectedCategoryIndex * marginParam + '%';
+    slideEl.style.marginLeft = (1 + selectedCategoryIndex) * marginParam + '%';
   }
 };

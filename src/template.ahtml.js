@@ -20,7 +20,12 @@ module.exports = api => {
             [`span[class="cat cat-${category}"]`]: '',
             'span[class="ep-c-text"]': categoryNameMap[category]
           }
-        }), {})
+        }), {
+          [`span[class="ep-c"]`]: {
+            [`span[class="cat cat-recent"]`]: '',
+            'span[class="ep-c-text"]': 'RECENT'
+          }
+        })
       ],
       'div[class="ep-emojies"]': categoryOrder.reduce((catObj, category) => Object.assign(catObj, {
         [`div[class="ep-emojies-c" data-category-id="${category}"]`]: emojiData[category].reduce((emojiObj, emoji) => Object.assign(emojiObj, {
